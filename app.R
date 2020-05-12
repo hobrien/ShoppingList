@@ -29,42 +29,63 @@ recipes <- unique(ingredients$recipe)
 list_ingredients <- function(ingredients, recipe_list) {
   filter(ingredients, recipe %in% recipe_list ) %>%
     group_by(ingredient, unit) %>%
-    summarise(amount=sum(amount))
+    summarise(amount=sum(amount)) %>%
+    ungroup() %>%
+    mutate(unit=ifelse(is.na(unit), '', unit),
+           spacer = ifelse(unit == '', '', ' '),
+           plural = ifelse(amount == 1 | unit == '', '', 's'),
+           ingredient=paste0(ingredient, " (", amount, spacer, unit, plural, ')')
+    )
 }
     
 
 ui <- fluidPage(
    
-   titlePanel("Shopping List Generator"),
-   
-   fluidRow(
-      column(6,
-        h2("Recipes"),
-        DT::dataTableOutput('Sources')
-        
-      ),
-      
-      column(6,
-        h2("Ingredients"),
-        DT::dataTableOutput('Ingredients')
-      )
-   ),
-   fluidRow(
-     column(6,
-            actionButton('clear1', 'Clear Selection')
+  navbarPage("Shopping List Generator",
+   tabPanel("Recipes",
+     fluidRow(
+       column(12,
+          DT::dataTableOutput('Sources')
+       )
      ),
-     column(6,
-            downloadButton("downloadData", "Download List")
+     fluidRow(
+       column(12,
+             actionButton('clear1', 'Clear Selection')
+       )
      )
-   )
-          
+   ),
+   tabPanel("Ingredients",
+     fluidRow(
+       column(12,
+         checkboxGroupInput("Ingredients", label = '',
+                            choices = c())
+       )
+     ),
+   fluidRow(
+      column(12,
+             downloadButton("downloadData", "Download List")
+      )
+    )
+  )    
+)
 )
 
-server <- function(input, output) {
+server <- function(input, output, session) {
   output$Ingredients <- DT::renderDataTable({
     list_ingredients(ingredients, sources$recipe[input$Sources_rows_selected]) %>%
     DT::datatable()
   })
+  observe({
+    ingredients <- list_ingredients(ingredients, 
+                                    sources$recipe[input$Sources_rows_selected]) %>%
+      `$`(ingredient)
+    
+    updateCheckboxGroupInput(session, 
+                             "Ingredients",
+                             choices = ingredients
+    )
+  })
+
   output$Sources <- DT::renderDataTable({
     sources %>%
       DT::datatable(selection='multiple', escape = FALSE)
