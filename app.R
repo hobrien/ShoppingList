@@ -13,7 +13,8 @@ library(DT)
 
 units <- read_csv("Data/units_view.csv") %>% select(-id)
 
-ingredients <- read_csv("Data/Ingredients_view.csv") %>% 
+ingredients <- read_csv("Data/staples_view.csv") %>% mutate(recipe = 'staples') %>%
+  bind_rows(read_csv("Data/Ingredients_view.csv")) %>% 
   left_join(units) %>%
   select(-id)
 
@@ -32,6 +33,7 @@ sources <- count(ingredients, recipe) %>% select(recipe) %>%
 recipes <- unique(ingredients$recipe)
 
 list_ingredients <- function(ingredients, recipe_list) {
+  recipe_list <- c("staples", recipe_list)
   filter(ingredients, recipe %in% recipe_list ) %>%
     group_by(ingredient, unit) %>%
     summarise(amount=sum(amount)) %>%
