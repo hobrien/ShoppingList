@@ -11,7 +11,12 @@ library(shiny)
 library(tidyverse)
 library(DT)
 
-ingredients <- read_csv("Data/Ingredients_view.csv") %>% select(-id)
+units <- read_csv("Data/units_view.csv") %>% select(-id)
+
+ingredients <- read_csv("Data/Ingredients_view.csv") %>% 
+  left_join(units) %>%
+  select(-id)
+
 sources <- read_csv("Data/sources_view.csv") %>% 
   mutate(link=paste0("<a href=", link, " target='_blank'>", source, "</a>"),
          source=ifelse(str_detect(link, 'NULL'), source, link)) %>%

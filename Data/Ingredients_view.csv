@@ -1,86 +1,86 @@
-"id","recipe","ingredient","unit","amount"
-1,"Fajitas","skirt steak","grams",500
-2,"Fajitas","peppers","",3
-3,"Fajitas","limes","",1
-4,"Fajitas","red onions","",2
-5,"Fajitas","tortillas","6 pack",2
-6,"Fajitas","sour cream","300 ml tub",0.25
-7,"Spaghetti and Meatballs","canned tomatoes","16 oz can",4
-8,"Spaghetti and Meatballs","buttermilk","300 ml tub",1
-9,"Korean Beef Soup","beef brisket","grams",500
-10,"Korean Beef Soup","scallions","bunch",3
-11,"Jerk Chicken","chicken","",1
-12,"Hoppin John","black eyed peas","16 oz can",3
-13,"Hoppin John","parsley","bunch",0.25
-14,"Hoppin John","bacon","pack",0.5
-15,"Singapore Noodles","rice vermicelli","pack",1
-16,"Singapore Noodles","shrimp","pack",1
-17,"Tofu Curry","tofu","pack",1
-18,"Tofu Curry","snow peas","pack",1
-19,"Tofu Curry","red onions","",1
-20,"Tofu Curry","peppers","",2
-21,"Fajitas","chillies","",4
-22,"Pork Stir Fry","pork fillet","",1
-23,"Cacio e Pepe","romano cheese","wedge",0.5
-24,"Cacio e Pepe","spaghetti","pack",1
-25,"Korean Beef Soup","garlic","head",1
-26,"Broccoli and Gorgonzola Pasta","broccoli","head",1
-27,"Broccoli and Gorgonzola Pasta","gorgonzola cheese","wedge",1
-28,"Broccoli and Gorgonzola Pasta","cream","300 ml tub",1
-29,"BBQ Ribs","spare ribs","rack",1
-30,"Slaw","Cabbage","head",1
-31,"German Potato Salad","vivaldi potatoes","kg",2
-32,"German Potato Salad","bacon","pack",0.5
-33,"German Potato Salad","apple","",2
-34,"German Potato Salad","eggs","",4
-35,"Broccoli and Gorgonzola Pasta","fusili","pack",1
-36,"Pasta Putenesca","spaghetti","pack",1
-37,"Pasta Putenesca","olives","pack",3
-38,"Pasta Putenesca","capers","jar",0.5
-39,"Pasta Putenesca","anchovies","tin",0.5
-40,"Pasta Putenesca","canned tomatoes","16 oz can",2
-41,"Pasta Putenesca","parmesan cheese","wedge",0.5
-42,"Beef Randang","beef chuck","g",1000
-43,"Cucumber Carrot Pickle","cucumber","",1
-44,"Cucumber Carrot Pickle","carrot","",2
-45,"Cucumber Carrot Pickle","green thai chilies","",2
-46,"Beef Randang","nutmeg","",1
-47,"Beef Randang","shallots","",6
-48,"Cucumber Carrot Pickle","shallots","",3
-49,"Beef Randang","red thai chilies","",10
-50,"Beef Randang","coconut milk","16 oz can",1
-51,"Beef Randang","lemongrass","",3
-52,"Beef Randang","cinnamon stick","",1
-53,"Beef Randang","galangal","inches",2
-54,"Singapore Noodles","curry powder","tbsp",2
-55,"Singapore Noodles","eggs","",4
-56,"Singapore Noodles","scallions","bunch",0.5
-57,"Singapore Noodles","peppers","",1
-58,"Singapore Noodles","chicken stock","500 ml pack",0.5
-59,"Singapore Noodles","limes","",1
-60,"Singapore Noodles","shallots","",2
-61,"Rice Pilaf","basmati rice","cups",1.5
-62,"Burritos","dried black beans","500 g pack",1
-63,"Burritos","tortillas","6 pack",2
-64,"Burritos","sour cream","300 ml tub",0.5
-65,"Burritos","scallions","bunch",1
-66,"Burritos","chillies","",2
-67,"Burritos","peppers","",2
-68,"Burritos","lettuce","head",0.5
-69,"Pork Stir Fry","peppers","",2
-70,"Pork Stir Fry","peppers","",1
-71,"Jerk Chicken","scallions","bunch",1
-72,"Jerk Chicken","habanero chili","",2
-73,"Mango Hot Sauce","habanero chili","",3
-74,"Mango Hot Sauce","mango","",1
-75,"German Potato Salad","cornichon","jar",2
-76,"Panna Cotta","cream","300 ml tub",1
-77,"Panna Cotta","buttermilk","300 ml tub",1
-78,"Spaghetti and Meatballs","pork mince","grams",250
-79,"Spaghetti and Meatballs","beef mince","grams",750
-80,"Spaghetti and Meatballs","parsley","bunch",0.25
-81,"Spaghetti and Meatballs","parmesan cheese","wedge",0.25
-82,"Spaghetti and Meatballs","eggs","",1
-83,"Spaghetti and Meatballs","basil","bunch",1
-84,"Spaghetti and Meatballs","spaghetti","pack",1
-85,"Korean Beef Soup","eggs","",2
+"id","recipe","ingredient","amount"
+1,"Fajitas","skirt steak",0.5
+2,"Fajitas","peppers",3
+3,"Fajitas","limes",1
+4,"Fajitas","red onions",2
+5,"Fajitas","tortillas",2
+6,"Fajitas","sour cream",0.25
+7,"Spaghetti and Meatballs","canned tomatoes",4
+8,"Spaghetti and Meatballs","buttermilk",1
+9,"Korean Beef Soup","beef brisket",0.5
+10,"Korean Beef Soup","scallions",3
+11,"Jerk Chicken","chicken",1
+12,"Hoppin John","black eyed peas",3
+13,"Hoppin John","parsley",0.25
+14,"Hoppin John","bacon",0.5
+15,"Singapore Noodles","rice vermicelli",6
+16,"Singapore Noodles","shrimp",1
+17,"Tofu Curry","tofu",1
+18,"Tofu Curry","snow peas",1
+19,"Tofu Curry","red onions",1
+20,"Tofu Curry","peppers",2
+21,"Fajitas","chillies",4
+22,"Pork Stir Fry","pork fillet",1
+23,"Cacio e Pepe","romano cheese",0.5
+24,"Cacio e Pepe","spaghetti",1
+25,"Korean Beef Soup","garlic",1
+26,"Broccoli and Gorgonzola Pasta","broccoli",1
+27,"Broccoli and Gorgonzola Pasta","gorgonzola cheese",1
+28,"Broccoli and Gorgonzola Pasta","cream",1
+29,"BBQ Ribs","spare ribs",1
+30,"Slaw","cabbage",1
+31,"German Potato Salad","vivaldi potatoes",2
+32,"German Potato Salad","bacon",0.5
+33,"German Potato Salad","apples",2
+34,"German Potato Salad","eggs",4
+35,"Broccoli and Gorgonzola Pasta","fusilli",1
+36,"Pasta Putenesca","spaghetti",1
+37,"Pasta Putenesca","olives",3
+38,"Pasta Putenesca","capers",0.5
+39,"Pasta Putenesca","anchovies",0.5
+40,"Pasta Putenesca","canned tomatoes",2
+41,"Pasta Putenesca","parmesan cheese",0.5
+42,"Beef Randang","beef chuck",1
+43,"Cucumber Carrot Pickle","cucumber",1
+44,"Cucumber Carrot Pickle","carrots",2
+45,"Cucumber Carrot Pickle","green thai chilies",2
+46,"Beef Randang","nutmeg",1
+47,"Beef Randang","shallots",6
+48,"Cucumber Carrot Pickle","shallots",3
+49,"Beef Randang","red thai chilies",10
+50,"Beef Randang","canned coconut milk",1
+51,"Beef Randang","lemongrass",3
+52,"Beef Randang","cinnamon stick",1
+53,"Beef Randang","galangal",2
+54,"Singapore Noodles","curry powder",2
+55,"Singapore Noodles","eggs",4
+56,"Singapore Noodles","scallions",0.5
+57,"Singapore Noodles","peppers",1
+58,"Singapore Noodles","chicken stock",0.5
+59,"Singapore Noodles","limes",1
+60,"Singapore Noodles","shallots",2
+61,"Rice Pilaf","basmati rice",1.5
+62,"Burritos","dried black beans",1
+63,"Burritos","tortillas",2
+64,"Burritos","sour cream",0.5
+65,"Burritos","scallions",1
+66,"Burritos","chillies",2
+67,"Burritos","peppers",2
+68,"Burritos","lettuce",0.5
+69,"Pork Stir Fry","peppers",2
+70,"Pork Stir Fry","peppers",1
+71,"Jerk Chicken","scallions",1
+72,"Jerk Chicken","habanero chilies",2
+73,"Mango Hot Sauce","habanero chilies",3
+74,"Mango Hot Sauce","mango",1
+75,"German Potato Salad","cornichon",2
+76,"Panna Cotta","cream",1
+77,"Panna Cotta","buttermilk",1
+78,"Spaghetti and Meatballs","pork mince",250
+79,"Spaghetti and Meatballs","beef mince",0.75
+80,"Spaghetti and Meatballs","parsley",0.25
+81,"Spaghetti and Meatballs","parmesan cheese",0.25
+82,"Spaghetti and Meatballs","eggs",1
+83,"Spaghetti and Meatballs","basil",1
+84,"Spaghetti and Meatballs","spaghetti",1
+85,"Korean Beef Soup","eggs",2
