@@ -1,10 +1,4 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
+
 #setwd("~/Dropbox/Home/Food/ShoppingList/")
 
 library(shiny)
@@ -24,6 +18,7 @@ sources <- read_csv("Data/sources_view.csv") %>%
   select(-id, -link)
 
 sources <- count(ingredients, recipe) %>% select(recipe) %>%
+  filter(recipe != 'staples') %>%
   left_join(sources) %>%
   left_join(read_csv("Data/frequency_view.csv")) %>%
   arrange(desc(freq)) %>%
@@ -32,9 +27,11 @@ sources <- count(ingredients, recipe) %>% select(recipe) %>%
 
 recipes <- unique(ingredients$recipe)
 
-list_ingredients <- function(ingredients, recipe_list) {
+list_ingredients <- function(ingredients, recipe_list, categories) {
+  categories <- ifelse(categories == 'all', unique(ingredients$category), c(categories))
   recipe_list <- c("staples", recipe_list)
   filter(ingredients, recipe %in% recipe_list ) %>%
+    filter(category %in% categories) %>%
     group_by(ingredient, unit) %>%
     summarise(amount=sum(amount)) %>%
     ungroup() %>%
@@ -64,12 +61,60 @@ ui <- fluidPage(
    tabPanel("Ingredients",
      fluidRow(
        column(12,
-         checkboxGroupInput("Ingredients", label = '',
+         checkboxGroupInput("DriedGoods", label = 'Dried Goods',
                             choices = c())
        )
      ),
-   fluidRow(
-      column(12,
+     fluidRow(
+       column(12,
+              checkboxGroupInput("CannedGoods", label = 'Canned Goods',
+                                 choices = c())
+       )
+     ),
+     fluidRow(
+       column(12,
+              checkboxGroupInput("Spices", label = 'Spices',
+                                 choices = c())
+       )
+     ),
+     fluidRow(
+       column(12,
+              checkboxGroupInput("Bakery", label = 'Bakery',
+                                 choices = c())
+       )
+     ),
+     fluidRow(
+       column(12,
+              checkboxGroupInput("Produce", label = 'Produce',
+                                 choices = c())
+       )
+     ),
+     fluidRow(
+       column(12,
+              checkboxGroupInput("Dairy", label = 'Dairy',
+                                 choices = c())
+       )
+     ),
+     fluidRow(
+       column(12,
+              checkboxGroupInput("Meat", label = 'Meat',
+                                 choices = c())
+       )
+     ),
+     fluidRow(
+       column(12,
+              checkboxGroupInput("Frozen", label = 'Frozen',
+                                 choices = c())
+       )
+     ),
+     fluidRow(
+       column(12,
+              checkboxGroupInput("AsianMarket", label = 'Asian Market',
+                                 choices = c())
+       )
+     ),
+     fluidRow(
+       column(12,
              downloadButton("downloadData", "Download List")
       )
     )
@@ -78,22 +123,106 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session) {
-  output$Ingredients <- DT::renderDataTable({
-    list_ingredients(ingredients, sources$recipe[input$Sources_rows_selected]) %>%
-    DT::datatable()
-  })
   observe({
     ingredients <- list_ingredients(ingredients, 
-                                    sources$recipe[input$Sources_rows_selected]) %>%
+                                    sources$recipe[input$Sources_rows_selected], "dried goods") %>%
       `$`(ingredient)
     
     updateCheckboxGroupInput(session, 
-                             "Ingredients",
+                             "DriedGoods",
                              choices = ingredients
     )
   })
 
-  output$Sources <- DT::renderDataTable({
+  observe({
+    ingredients <- list_ingredients(ingredients, 
+                                    sources$recipe[input$Sources_rows_selected], "canned goods") %>%
+      `$`(ingredient)
+    
+    updateCheckboxGroupInput(session, 
+                             "CannedGoods",
+                             choices = ingredients
+    )
+  })
+  
+  observe({
+    ingredients <- list_ingredients(ingredients, 
+                                    sources$recipe[input$Sources_rows_selected], "spices") %>%
+      `$`(ingredient)
+    
+    updateCheckboxGroupInput(session, 
+                             "Spices",
+                             choices = ingredients
+    )
+  })
+  
+  observe({
+    ingredients <- list_ingredients(ingredients, 
+                                    sources$recipe[input$Sources_rows_selected], "bakery") %>%
+      `$`(ingredient)
+    
+    updateCheckboxGroupInput(session, 
+                             "Bakery",
+                             choices = ingredients
+    )
+  })  
+  
+  observe({
+    ingredients <- list_ingredients(ingredients, 
+                                    sources$recipe[input$Sources_rows_selected], "produce") %>%
+      `$`(ingredient)
+    
+    updateCheckboxGroupInput(session, 
+                             "Produce",
+                             choices = ingredients
+    )
+  })  
+  
+  observe({
+    ingredients <- list_ingredients(ingredients, 
+                                    sources$recipe[input$Sources_rows_selected], "dairy") %>%
+      `$`(ingredient)
+    
+    updateCheckboxGroupInput(session, 
+                             "Dairy",
+                             choices = ingredients
+    )
+  }) 
+  
+  observe({
+    ingredients <- list_ingredients(ingredients, 
+                                    sources$recipe[input$Sources_rows_selected], "meat") %>%
+      `$`(ingredient)
+    
+    updateCheckboxGroupInput(session, 
+                             "Meat",
+                             choices = ingredients
+    )
+  }) 
+  
+  observe({
+    ingredients <- list_ingredients(ingredients, 
+                                    sources$recipe[input$Sources_rows_selected], "frozen food") %>%
+      `$`(ingredient)
+    
+    updateCheckboxGroupInput(session, 
+                             "Frozen",
+                             choices = ingredients
+    )
+  })
+  
+  observe({
+    ingredients <- list_ingredients(ingredients, 
+                                    sources$recipe[input$Sources_rows_selected], "asian market") %>%
+      `$`(ingredient)
+    
+    updateCheckboxGroupInput(session, 
+                             "AsianMarket",
+                             choices = ingredients
+    )
+  }) 
+
+    output$Sources <- DT::renderDataTable({
     sources %>%
       DT::datatable(selection='multiple', escape = FALSE)
   })
@@ -106,7 +235,7 @@ server <- function(input, output, session) {
       "Ingredients.csv"
     },
     content = function(file) {
-      write_tsv(list_ingredients(ingredients, sources$recipe[input$Sources_rows_selected]),
+      write_tsv(list_ingredients(ingredients, sources$recipe[input$Sources_rows_selected], "all"),
                 file, na='')
     })
 }
