@@ -35,7 +35,7 @@
 34,"German Potato Salad","eggs",4
 35,"Broccoli and Gorgonzola Pasta","fusilli",1
 36,"Pasta Putenesca","spaghetti",1
-37,"Pasta Putenesca","olives",3
+37,"Pasta Putenesca","olives",2
 38,"Pasta Putenesca","capers",0.5
 39,"Pasta Putenesca","anchovies",0.5
 40,"Pasta Putenesca","canned tomatoes",2
@@ -48,7 +48,7 @@
 47,"Beef Randang","shallots",6
 48,"Cucumber Carrot Pickle","shallots",3
 49,"Beef Randang","red thai chilies",10
-50,"Beef Randang","canned coconut milk",1
+50,"Beef Randang","canned coconut milk",2
 51,"Beef Randang","lemongrass",3
 52,"Beef Randang","cinnamon stick",1
 53,"Beef Randang","galangal",2
@@ -72,7 +72,7 @@
 71,"Jerk Chicken","scallions",1
 72,"Jerk Chicken","habanero chilies",2
 73,"Mango Hot Sauce","habanero chilies",3
-74,"Mango Hot Sauce","mango",1
+74,"Mango Hot Sauce","mangos",1
 75,"German Potato Salad","cornichon",2
 76,"Panna Cotta","cream",1
 77,"Panna Cotta","buttermilk",1
@@ -84,3 +84,65 @@
 83,"Spaghetti and Meatballs","basil",1
 84,"Spaghetti and Meatballs","spaghetti",1
 85,"Korean Beef Soup","eggs",2
+86,"Grain Salad","farrow",1
+87,"Grain Salad","lentils",1
+88,"Grain Salad","cucumber",1
+89,"Grain Salad","capers",0.5
+90,"Grain Salad","pomegranate",1
+91,"Grain Salad","carrots",3
+92,"Grain Salad","olives",2
+93,"Grain Salad","parsley",0.5
+94,"Grain Salad","raisins",1
+95,"Grain Salad","shallots",1
+96,"Grain Salad","lemon",0.5
+97,"Cubano","pork loin",1
+98,"Cubano","gherkins",0.25
+99,"Cubano","emental cheese",0.25
+100,"Cubano","ciabatta rolls",4
+101,"White Bean and Mushroom Gratin","canned white beans",2
+102,"White Bean and Mushroom Gratin","mushrooms",0.5
+103,"White Bean and Mushroom Gratin","bread",0.25
+104,"White Bean and Mushroom Gratin","parsley",0.25
+105,"White Bean and Mushroom Gratin","onions",1
+106,"White Bean and Mushroom Gratin","carrots",3
+107,"White Bean and Mushroom Gratin","sherry",0.1
+108,"Chicken Enchiladas","onions",1
+109,"Chicken Enchiladas","tomato sauce",1
+110,"Chicken Enchiladas","cilantro",0.5
+111,"Chicken Enchiladas","cheddar cheese",1
+112,"Chicken Enchiladas","pickled peppers",1
+113,"Chicken Enchiladas","chicken thighs",4
+114,"Chicken Enchiladas","tortillas",2
+115,"Bouletten","pork mince",0.75
+116,"Bouletten","egg",1
+117,"Bouletten","carrots",4
+118,"Bouletten","frozen peas",0.25
+119,"Bouletten","parsley",0.25
+120,"Bouletten","bread crumbs",0.25
+121,"Sichuan Green Beans","green beans",4
+122,"Sichuan Green Beans","pork mince",0.25
+123,"Sichuan Green Beans","scallions",0.5
+124,"Sichuan Green Beans","peppers",2
+125,"Pan Bagnat","tomatoes",1
+126,"Pan Bagnat","red onions",1
+127,"Pan Bagnat","baguette",1
+128,"Pan Bagnat","olives",3
+129,"Pan Bagnat","parsley",0.5
+130,"Pan Bagnat","capers",0.5
+131,"Pan Bagnat","anchovies",0.5
+132,"Pan Bagnat","ventresca tuna",2
+133,"Pan Bagnat","eggs",3
+134,"Pad Thai","eggs",4
+135,"Pad Thai","bean sprouts",1
+136,"Pad Thai","rice noddles",1
+137,"Pad Thai","chillies",2
+138,"Pad Thai","radishes",0.5
+139,"Pad Thai","peanuts",0.25
+140,"Pad Thai","shrimp",1
+141,"Pad Thai","limes",1
+142,"Red Beans and Rice","kidney beans",1
+143,"Red Beans and Rice","ham hock",1
+144,"Red Beans and Rice","peppers",2
+145,"Red Beans and Rice","celery",0.25
+146,"Red Beans and Rice","chillies",2
+147,"Red Beans and Rice","red onions",1
