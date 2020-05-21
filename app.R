@@ -28,18 +28,23 @@ sources <- count(ingredients, recipe) %>% select(recipe) %>%
 recipes <- unique(ingredients$recipe)
 
 list_ingredients <- function(ingredients, recipe_list, categories) {
-  categories <- ifelse(categories == 'all', unique(ingredients$category), c(categories))
+  if (categories == 'all') {
+      categories <- unique(ingredients$category)
+  } else {
+    categories <- c(categories)
+  }
   recipe_list <- c("staples", recipe_list)
   filter(ingredients, recipe %in% recipe_list ) %>%
     filter(category %in% categories) %>%
-    group_by(ingredient, unit) %>%
+    group_by(ingredient, unit, category) %>%
     summarise(amount=sum(amount)) %>%
     ungroup() %>%
     mutate(unit=ifelse(is.na(unit), '', unit),
            spacer = ifelse(unit == '', '', ' '),
            plural = ifelse(amount == 1 | unit == '', '', 's'),
            ingredient=paste0(ingredient, " (", amount, spacer, unit, plural, ')')
-    )
+    ) %>%
+    select(ingredient, category)
 }
     
 
@@ -235,7 +240,8 @@ server <- function(input, output, session) {
       "Ingredients.csv"
     },
     content = function(file) {
-      write_tsv(list_ingredients(ingredients, sources$recipe[input$Sources_rows_selected], "all"),
+      write_tsv(list_ingredients(ingredients, sources$recipe[input$Sources_rows_selected], "all") %>%
+                  arrange(category),
                 file, na='')
     })
 }
