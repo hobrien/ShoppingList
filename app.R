@@ -241,6 +241,10 @@ server <- function(input, output, session) {
     },
     content = function(file) {
       write_tsv(list_ingredients(ingredients, sources$recipe[input$Sources_rows_selected], "all") %>%
+                  filter(!ingredient %in% c(input$DriedGoods, input$CannedGoods, 
+                                            input$Spices, input$Bakery, input$Produce,
+                                            input$Dairy, input$Meat, input$AsianMarket,
+                                            input$Frozen)) %>%
                   arrange(category),
                 file, na='')
     })
