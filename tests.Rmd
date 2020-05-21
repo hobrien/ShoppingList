@@ -1,0 +1,52 @@
+---
+title: "Data Tests"
+output: html_notebook
+---
+
+This will be a series of joins to make sure that data matches up between tables
+
+```{r setup}
+library(tidyverse)
+
+units <- read_csv("Data/units_view.csv") %>% select(-id)
+
+ingredients <- read_csv("Data/staples_view.csv") %>% mutate(recipe = 'staples') %>%
+  bind_rows(read_csv("Data/Ingredients_view.csv")) %>% 
+  left_join(units) %>%
+  select(-id)
+
+sources <- read_csv("Data/sources_view.csv") %>% 
+  mutate(link=paste0("<a href=", link, " target='_blank'>", source, "</a>"),
+         source=ifelse(str_detect(link, 'NULL'), source, link)) %>%
+  select(-id, -link)
+
+sources <- count(ingredients, recipe) %>% select(recipe) %>%
+  filter(recipe != 'staples') %>%
+  left_join(sources) %>%
+  left_join(read_csv("Data/frequency_view.csv")) %>%
+  arrange(desc(freq)) %>%
+  select( -id)
+
+```
+
+- all ingredients should have an entry in the units table
+```{r}
+ingredients %>% anti_join(units)
+```
+
+- all recipes should have an entry in the frequency table
+```{r}
+filter(sources, is.na(freq))
+```
+- there should be no duplicate ingredients in the units table, or in the ingredients table for the same recipe
+```{r}
+count(ingredients, recipe, ingredient) %>% filter(n>1)
+count(units, ingredient) %>% filter(n>1)
+```
+
+- make sure none of the categories are mis-spelled
+```{r} 
+filter(units, !category %in% c('alcohol', 'asian market', 'bakery', 'canned goods', 'dairy', 'dried goods', 'frozen food', 'meat', 'produce', 'spices')) 
+```
+
+
