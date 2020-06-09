@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.7.11)
 # Database: Recipes
-# Generation Time: 2020-06-09 21:13:14 +0000
+# Generation Time: 2020-06-09 21:22:50 +0000
 # ************************************************************
 
 
@@ -78,7 +78,8 @@ VALUES
 	(39,'Fideos',2),
 	(40,'Fish Tagine',1),
 	(41,'Salade Lyonnaise',1),
-	(42,'Brown Rice and Salmon Bowl',2);
+	(42,'Brown Rice and Salmon Bowl',2),
+	(43,'Spring Risotto',1);
 
 /*!40000 ALTER TABLE `frequency` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -311,7 +312,12 @@ VALUES
 	(208,'Brown Rice and Salmon Bowl','cucumbers',1),
 	(209,'Brown Rice and Salmon Bowl','brown rice',0.25),
 	(210,'Brown Rice and Salmon Bowl','shiitake mushrooms',0.5),
-	(211,'Brown Rice and Salmon Bowl','salmon',0.5);
+	(211,'Brown Rice and Salmon Bowl','salmon',0.5),
+	(212,'Spring Risotto','shelled peas',1),
+	(213,'Spring Risotto','artichokes',5),
+	(214,'Spring Risotto','feta cheese',1),
+	(215,'Spring Risotto','arborio rice',1),
+	(216,'Spring Risotto','broad beans',0.5);
 
 /*!40000 ALTER TABLE `Ingredients` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -559,7 +565,10 @@ VALUES
 	(126,'oyster mushrooms','kg','produce'),
 	(127,'pancetta','200g pack','meat'),
 	(128,'shiitake mushrooms','kg','produce'),
-	(129,'salmon','kg','meat');
+	(129,'salmon','kg','meat'),
+	(130,'artichokes','','produce'),
+	(131,'arborio rice','500g pack','dried goods'),
+	(132,'broad beans','kg','produce');
 
 /*!40000 ALTER TABLE `units` ENABLE KEYS */;
 UNLOCK TABLES;
