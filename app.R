@@ -5,14 +5,14 @@ library(shiny)
 library(tidyverse)
 library(DT)
 
-units <- read_csv("Data/units_view.csv") %>% select(-id)
+units <- read_csv("Data/units.csv") %>% select(-id)
 
-ingredients <- read_csv("Data/staples_view.csv") %>% mutate(recipe = 'staples') %>%
-  bind_rows(read_csv("Data/Ingredients_view.csv")) %>% 
+ingredients <- read_csv("Data/staples.csv") %>% mutate(recipe = 'staples') %>%
+  bind_rows(read_csv("Data/Ingredients.csv")) %>% 
   left_join(units) %>%
   select(-id)
 
-sources <- read_csv("Data/sources_view.csv") %>% 
+sources <- read_csv("Data/sources.csv") %>% 
   mutate(link=paste0("<a href=", link, " target='_blank'>", source, "</a>"),
          source=ifelse(str_detect(link, 'NULL'), source, link)) %>%
   select(-id, -link)
@@ -20,7 +20,7 @@ sources <- read_csv("Data/sources_view.csv") %>%
 sources <- count(ingredients, recipe) %>% select(recipe) %>%
   filter(recipe != 'staples') %>%
   left_join(sources) %>%
-  left_join(read_csv("Data/frequency_view.csv")) %>%
+  left_join(read_csv("Data/frequency.csv")) %>%
   arrange(desc(freq)) %>%
   select(-freq, -id)
               
