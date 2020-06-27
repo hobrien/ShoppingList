@@ -43,11 +43,11 @@ id,"recipe","ingredient",amount
 42,"Beef Randang","beef chuck",1
 43,"Cucumber Carrot Pickle","cucumbers",1
 44,"Cucumber Carrot Pickle","carrots",2
-45,"Cucumber Carrot Pickle","green thai chilies",2
+45,"Cucumber Carrot Pickle","green thai chillies",2
 46,"Beef Randang","nutmeg",1
 47,"Beef Randang","shallots",6
 48,"Cucumber Carrot Pickle","shallots",3
-49,"Beef Randang","red thai chilies",10
+49,"Beef Randang","red thai chillies",10
 50,"Beef Randang","canned coconut milk",2
 51,"Beef Randang","lemongrass",3
 52,"Beef Randang","cinnamon stick",1
@@ -70,8 +70,8 @@ id,"recipe","ingredient",amount
 69,"Pork Stir Fry","peppers",2
 70,"Pork Stir Fry","ginger",1
 71,"Jerk Chicken","scallions",1
-72,"Jerk Chicken","habanero chilies",2
-73,"Mango Hot Sauce","habanero chilies",3
+72,"Jerk Chicken","habanero chillies",2
+73,"Mango Hot Sauce","habanero chillies",3
 74,"Mango Hot Sauce","mangos",1
 75,"German Potato Salad","cornichons",2
 76,"Panna Cotta","cream",1
@@ -191,7 +191,7 @@ id,"recipe","ingredient",amount
 191,"Fish Tagine","canned tomatoes",1
 192,"Fish Tagine","carrots",1
 193,"Ramen","oyster mushrooms",0.33
-194,"White Bean and Mushroom Gratin","sherry",0.1
+194,"Nachos","tortilla chips",2
 195,"Ramen","chillies",2
 196,"Ramen","eggs",2
 197,"Ramen","scallions",0.5
@@ -213,4 +213,23 @@ id,"recipe","ingredient",amount
 213,"Spring Risotto","artichokes",5
 214,"Spring Risotto","feta cheese",1
 215,"Spring Risotto","arborio rice",1
-216,"Spring Risotto","broad beans",0.5
+216,"Spring Risotto","broad beans",1
+217,"Rice Salad","carnaroli rice",1
+218,"Rice Salad","courgettes",1
+219,"Rice Salad","tomatoes",2
+220,"Rice Salad","olives",1
+221,"Rice Salad","green olives",1
+222,"Rice Salad","celery",0.1
+223,"Rice Salad","yellow peppers",1
+224,"Rice Salad","carrots",2
+225,"Rice Salad","parmesan cheese",0.25
+226,"Rice Salad","lemons",1
+227,"Rice Salad","ventresca tuna",1
+228,"Burritos","dried black beans",1
+229,"Nachos","cheddar cheese",0.5
+230,"Nachos","peppers",2
+231,"Nachos","canned black beans",1
+232,"Nachos","scallions",0.5
+233,"Nachos","chillies",3
+234,"Nachos","salsa",1
+235,"Nachos","sour cream",0.25
