@@ -2,6 +2,7 @@
 
 ## Ingredients
 
+| Ingredient           | Quantity|
 | -------------------- | ------- |
 | Oil                  | 1 tbsp  |
 | Onion, diced         | 1       |
