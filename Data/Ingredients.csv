@@ -225,7 +225,6 @@ id,"recipe","ingredient",amount
 225,"Rice Salad","parmesan cheese",0.25
 226,"Rice Salad","lemons",1
 227,"Rice Salad","ventresca tuna",1
-228,"Burritos","dried black beans",1
 229,"Nachos","cheddar cheese",0.5
 230,"Nachos","peppers",2
 231,"Nachos","canned black beans",1
@@ -233,3 +232,39 @@ id,"recipe","ingredient",amount
 233,"Nachos","chillies",3
 234,"Nachos","salsa",1
 235,"Nachos","sour cream",0.25
+236,"Chinese Braised Beef","beef short ribs",1.5
+237,"Chinese Braised Beef","pak choi",3
+238,"Chinese Braised Beef","scallions",0.5
+239,"Chinese Braised Beef","ginger",2
+240,"Chinese Braised Beef","sherry",0.1
+241,"Thai Celery Salad","celery",1
+242,"Thai Celery Salad","limes",1
+243,"Thai Celery Salad","scallions",0.5
+244,"Thai Celery Salad","chillies",1
+245,"Thai Celery Salad","cilantro",0.5
+246,"Thai Celery Salad","peanuts",0.1
+247,"Farfalle with Squash, Lemon, Capers and Goats Cheese","courgettes",4
+248,"Farfalle with Squash, Lemon, Capers and Goats Cheese","capers",0.5
+249,"Farfalle with Squash, Lemon, Capers and Goats Cheese","shallots",3
+250,"Farfalle with Squash, Lemon, Capers and Goats Cheese","parsley",0.25
+251,"Farfalle with Squash, Lemon, Capers and Goats Cheese","goats cheese",1
+252,"Farfalle with Squash, Lemon, Capers and Goats Cheese","lemons",1
+253,"Farfalle with Squash, Lemon, Capers and Goats Cheese","farfalle",1
+254,"Brown Rice with Chickpeas and Coconut","brown rice",0.25
+255,"Brown Rice with Chickpeas and Coconut","chick peas",1
+256,"Brown Rice with Chickpeas and Coconut","canned coconut milk",1
+257,"Brown Rice with Chickpeas and Coconut","chicken stock",1
+258,"Brown Rice with Chickpeas and Coconut","scallions",0.5
+259,"Brown Rice with Chickpeas and Coconut","cilantro",0.25
+260,"Brown Rice with Chickpeas and Coconut","limes",0.5
+261,"Kale Salad with Sweet Potatoes","kale",2
+262,"Kale Salad with Sweet Potatoes","sweet potatoes",3
+263,"Kale Salad with Sweet Potatoes","chicory",1
+264,"Kale Salad with Sweet Potatoes","pecans",0.5
+265,"Kale Salad with Sweet Potatoes","shallots",1
+266,"Zucchini Tart","courgettes",4
+267,"Zucchini Tart","parmesan cheese",0.5
+268,"Zucchini Tart","ricotta cheese",1
+269,"Zucchini Tart","mozarella",1
+270,"Zucchini Tart","flour",0.25
+271,"Zucchini Tart","butter",0.5
